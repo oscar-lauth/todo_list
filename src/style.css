@@ -1,0 +1,56 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+
+.header {
+    display:flex;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content:space-between;
+    align-items:center;
+}
+.date-invis {
+    margin-right:auto;
+    visibility: hidden;
+}
+.title-name {
+    align-self: center;
+}
+.date {
+    margin-left:auto;
+}
+.container {
+    display: flex;
+    margin:10px; 
+}
+
+.title-cards-sidebar {
+    margin: 2px;
+    padding: 2px;
+    flex-basis: 25%; 
+    border: 1px solid red;
+}
+
+.todo-card {
+    margin: 2px;
+    padding: 2px;
+    flex-basis:75%;
+    border: 1px solid blue;
+}
+
+  
