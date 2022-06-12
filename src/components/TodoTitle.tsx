@@ -9,8 +9,10 @@ const TodoTitle = ({ title, handleChange }:titleProps) => {
   return (
     <div>
       <input className="todo-title"
-          defaultValue={title}
-          onChange={(e)=>handleChange(e.target.value)}>
+          value={title}
+          onChange={(e)=>{
+            e.preventDefault();
+            handleChange(e.target.value);}}>
         </input>
     </div>
   )

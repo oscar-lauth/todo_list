@@ -9,21 +9,20 @@ import { type } from '@testing-library/user-event/dist/type';
 function App() {
   const[title,setTitle] = useState('');
   const[content,setContent] = useState('');
-  const handleTitle=(t:string) =>{
-    setTitle(t);
-    console.log("Fired setTitle");
-  }
-  const handleContent=(c:string) =>{
-    setContent(c);
-    console.log("Fired setContent");
+  let todos: { title:string,content:string }[]=[];
+  const newTodoCard = ()=>{
+    todos.push({ title,content });
+    setTitle('');
+    setContent('');
+    console.log(todos);
   }
   
   return (
     <div className="App">
     <Header/>
     <div className="container">
-      {/* <Sidebar onAddTodo={newTodoCard}/> */}
-      <TodoCard title={title} content={content} setTitle={handleTitle} setContent={handleContent}/>
+      <Sidebar onAddTodo={newTodoCard}/>
+      <TodoCard title={title} content={content} setTitle={setTitle} setContent={setContent}/>
     </div>
   </div>
   );

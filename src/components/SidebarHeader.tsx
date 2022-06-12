@@ -1,14 +1,10 @@
-import { BADHINTS } from 'dns'
 import React from 'react'
+import { SidebarProps } from './Sidebar'
 
-interface SidebarHeaderProps {
-    onAddTodo:()=>void;
-}
-
-const SidebarHeader = (props:SidebarHeaderProps) => {
+const SidebarHeader = ({ onAddTodo }:SidebarProps) => {
     return (
         <div className="sidebar-header">
-            <button onClick={props.onAddTodo}>Add</button>
+            <button onClick={onAddTodo}>Add</button>
             <button>Done</button>
         </div>
     )

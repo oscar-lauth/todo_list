@@ -2,14 +2,14 @@ import React from 'react'
 import TitleCards from './TitleCards'
 import SidebarHeader from './SidebarHeader'
 
-// interface SidebarProps {
-//   onAddTodo:()=>void;
-// }
+export interface SidebarProps {
+   onAddTodo:()=>void;
+}
 
-const Sidebar = ( props: { onAddTodo: ()=>void }) => {
+const Sidebar = ({ onAddTodo }:SidebarProps) => {
   return (
     <div className="sidebar">
-        <SidebarHeader onAddTodo={props.onAddTodo}/>
+        <SidebarHeader onAddTodo={onAddTodo}/>
         <TitleCards/>
     </div>
   )

@@ -11,8 +11,10 @@ const TodoContent = ({ content, handleChange }:contentProps) => {
     <div className="todo-content">
       <p>
         <textarea className="content-area"
-          defaultValue={content}
-          onChange={(e)=>handleChange(e.target.value)}>
+          value={content}
+          onChange={(e)=>{
+            e.preventDefault();
+            handleChange(e.target.value);}}>
         </textarea>
       </p>
     </div>
