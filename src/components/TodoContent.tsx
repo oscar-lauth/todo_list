@@ -3,16 +3,16 @@ import { useState } from 'react'
 
 interface contentProps {
   content:string;
-  setContent:(content:object)=>void;
+  handleChange:(c:string)=>void;
 }
 
-const TodoContent = ({ content, setContent }:contentProps) => {
+const TodoContent = ({ content, handleChange }:contentProps) => {
   return (
     <div className="todo-content">
       <p>
         <textarea className="content-area"
-          value={content}
-          onChange={setContent}>
+          defaultValue={content}
+          onChange={(e)=>handleChange(e.target.value)}>
         </textarea>
       </p>
     </div>

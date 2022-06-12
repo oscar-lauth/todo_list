@@ -3,15 +3,17 @@ import TodoTitle from './TodoTitle'
 import TodoContent from './TodoContent'
 
 export interface TodoCardProps {
-  title?: string;
-  content?: string;
+  title: string;
+  content: string;
+  setTitle:(c:string)=>void;
+  setContent:(c:string)=>void;
 }
 
-const TodoCard = ({ title, content }:TodoCardProps) => {
+const TodoCard = ({ title, content, setTitle, setContent }:TodoCardProps) => {
   return (
     <div className="todo-card">
-      <TodoTitle title={title}/>
-      <TodoContent content={content} />
+      <TodoTitle title={title} handleChange={setTitle}/>
+      <TodoContent content={content} handleChange={setContent} />
     </div>
   )
 }

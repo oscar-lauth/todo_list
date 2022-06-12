@@ -1,9 +1,17 @@
 import React from 'react'
 
-const TodoTitle = ( { title='Enter title...' } ) => {
+interface titleProps {
+  title:string;
+  handleChange:(c:string)=>void;
+}
+
+const TodoTitle = ({ title, handleChange }:titleProps) => {
   return (
     <div>
-      <h2 className="todo-title" contentEditable="true">{title}</h2>
+      <input className="todo-title"
+          defaultValue={title}
+          onChange={(e)=>handleChange(e.target.value)}>
+        </input>
     </div>
   )
 }
