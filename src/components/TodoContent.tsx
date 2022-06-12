@@ -1,8 +1,21 @@
 import React from 'react'
+import { useState } from 'react'
 
-const TodoContent = () => {
+interface contentProps {
+  content:string;
+  setContent:(content:object)=>void;
+}
+
+const TodoContent = ({ content, setContent }:contentProps) => {
   return (
-    <div>TodoContent</div>
+    <div className="todo-content">
+      <p>
+        <textarea className="content-area"
+          value={content}
+          onChange={setContent}>
+        </textarea>
+      </p>
+    </div>
   )
 }
 

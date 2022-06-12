@@ -2,7 +2,8 @@ import React from 'react'
 
 const TitleCard = () => {
   return (
-    <div>TitleCard</div>
+    <div className="title-card">
+    </div>
   )
 }
 

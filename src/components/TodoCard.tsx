@@ -1,9 +1,17 @@
 import React from 'react'
+import TodoTitle from './TodoTitle'
+import TodoContent from './TodoContent'
 
-const TodoCard = () => {
+export interface TodoCardProps {
+  title?: string;
+  content?: string;
+}
+
+const TodoCard = ({ title, content }:TodoCardProps) => {
   return (
     <div className="todo-card">
-      TodoCard
+      <TodoTitle title={title}/>
+      <TodoContent content={content} />
     </div>
   )
 }

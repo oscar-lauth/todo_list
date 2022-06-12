@@ -1,8 +1,10 @@
 import React from 'react'
 
-const TodoTitle = () => {
+const TodoTitle = ( { title='Enter title...' } ) => {
   return (
-    <div>TodoTitle</div>
+    <div>
+      <h2 className="todo-title" contentEditable="true">{title}</h2>
+    </div>
   )
 }
 

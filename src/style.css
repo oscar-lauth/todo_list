@@ -39,10 +39,10 @@ code {
     margin:10px; 
 }
 
-.title-cards-sidebar {
+.sidebar {
     margin: 2px;
     padding: 2px;
-    flex-basis: 25%; 
+    flex-basis: auto;
     border: 1px solid red;
 }
 
@@ -53,4 +53,14 @@ code {
     border: 1px solid blue;
 }
 
+.todo-content {
+    padding: 20px;
+    min-height:800px;
+}
+
+.title-card {
+    border: 1px solid green;
+    height: 60px;
+    width:150px;
+}
   
