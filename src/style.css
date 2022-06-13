@@ -8,6 +8,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
+      background-color: #4A5871;
+      color:#E0EEEB;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -51,11 +53,35 @@ code {
     padding: 2px;
     flex-basis:75%;
     border: 1px solid blue;
+    display:flex;
+    flex-direction:column;
+    
+}
+input,textarea {
+    width:100%;
+    display:block
 }
 
-.todo-content {
-    padding: 20px;
+.title-input {
+    flex:0 0 auto;
+    min-height:50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:xx-large;
+    padding:10px;
+    background-color: #314657;
+    color:#E0EEEB;
+}
+
+.content-area {
+    flex:0 0 auto;
     min-height:800px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+    padding:10px;
+    resize:none;
+    background-color: #314657;
+    color:#E0EEEB;
+    
 }
 
 .title-card {

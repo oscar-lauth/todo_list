@@ -1,11 +1,13 @@
 import React from 'react'
-import { SidebarProps } from './Sidebar'
 
-const SidebarHeader = ({ onAddTodo }:SidebarProps) => {
+interface SidebarHeaderProps {
+    onAddTodo:()=>void;
+}
+
+const SidebarHeader = ({ onAddTodo }:SidebarHeaderProps) => {
     return (
         <div className="sidebar-header">
             <button onClick={onAddTodo}>Add</button>
-            <button>Done</button>
         </div>
     )
 }

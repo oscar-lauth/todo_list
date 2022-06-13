@@ -8,16 +8,14 @@ interface contentProps {
 
 const TodoContent = ({ content, handleChange }:contentProps) => {
   return (
-    <div className="todo-content">
-      <p>
+    <div>
         <textarea className="content-area"
           value={content}
           onChange={(e)=>{
             e.preventDefault();
             handleChange(e.target.value);}}>
         </textarea>
-      </p>
-    </div>
+      </div>
   )
 }
 

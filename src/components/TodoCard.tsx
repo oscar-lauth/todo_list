@@ -1,8 +1,9 @@
 import React from 'react'
 import TodoTitle from './TodoTitle'
 import TodoContent from './TodoContent'
+import { useState } from 'react'
 
-export interface TodoCardProps {
+interface TodoCardProps {
   title: string;
   content: string;
   setTitle:(c:string)=>void;

@@ -8,13 +8,13 @@ interface titleProps {
 const TodoTitle = ({ title, handleChange }:titleProps) => {
   return (
     <div>
-      <input className="todo-title"
+      <input className="title-input"
           value={title}
           onChange={(e)=>{
             e.preventDefault();
             handleChange(e.target.value);}}>
         </input>
-    </div>
+      </div>
   )
 }
 
