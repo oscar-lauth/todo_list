@@ -5,13 +5,14 @@ import SidebarHeader from './SidebarHeader'
 interface SidebarProps {
   todos:{ title:string,content:string }[];
    onAddTodo:()=>void;
+   onTitleCard:()=>void;
 }
 
-const Sidebar = ({ todos,onAddTodo }:SidebarProps) => {
+const Sidebar = ({ todos,onAddTodo,onTitleCard }:SidebarProps) => {
   return (
     <div className="sidebar">
         <SidebarHeader onAddTodo={onAddTodo}/>
-        <TitleCards todos={todos}/>
+        <TitleCards todos={todos} onTitleCard={onTitleCard}/>
     </div>
   )
 }

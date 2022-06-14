@@ -84,7 +84,7 @@ input,textarea {
     
 }
 
-.title-card {
+.title-card button {
     border: 1px solid green;
     height: 60px;
     width:150px;
