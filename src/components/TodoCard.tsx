@@ -11,7 +11,7 @@ interface TodoCardProps {
 
 const TodoCard = ({ title, content, setTitle, setContent }:TodoCardProps) => {
   return (
-    <div className="todo-card">
+    <div className="todo-card" spellCheck="false">
       <TodoTitle title={title} handleChange={setTitle}/>
       <TodoContent content={content} handleChange={setContent} />
     </div>

@@ -7,7 +7,7 @@ interface SidebarHeaderProps {
 const SidebarHeader = ({ onAddTodo }:SidebarHeaderProps) => {
     return (
         <div className="sidebar-header">
-            <button onClick={onAddTodo}>Add</button>
+            <button className="add-todo" onClick={onAddTodo}>Add</button>
         </div>
     )
 }
