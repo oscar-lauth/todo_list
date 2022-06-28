@@ -2,7 +2,7 @@ import React from 'react'
 
 interface titleProps {
   title:string;
-  handleChange:(c:string)=>void;
+  handleChange:(t:string)=>void;
 }
 
 const TodoTitle = ({ title, handleChange }:titleProps) => {

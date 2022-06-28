@@ -12,7 +12,10 @@ function App() {
   
 const isValidTitle:()=>boolean = ()=>{ 
   //return true only if title is non-empty and unique
+  setTitle('');
+  setContent('');
   if(title==='') return false;
+  //check not just unique title, but if title diff but UID already in array then we want to not clone a new card
   return !todos.some(td=>td.title===title);
 }
 
@@ -32,9 +35,10 @@ const isValidTitle:()=>boolean = ()=>{
   
   return (
     <div className="App">
-    <Header/>
+    {/* <Header/> */}
     <div className="container">
       <Sidebar todos={todos} onAddTodo={newTodoCard} onTitleCard={selectTitleCard}/>
+      {/* <div className="vertical-bar"></div> */}
       <TodoCard title={title} content={content} setTitle={setTitle} setContent={setContent}/>
     </div>
   </div>

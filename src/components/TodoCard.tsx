@@ -5,7 +5,7 @@ import TodoContent from './TodoContent'
 interface TodoCardProps {
   title: string;
   content: string;
-  setTitle:(c:string)=>void;
+  setTitle:(t:string)=>void;
   setContent:(c:string)=>void;
 }
 
