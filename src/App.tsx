@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import TodoCard from './components/TodoCard';
 import { useState } from 'react';
-import { isValidInputTimeValue } from '@testing-library/user-event/dist/utils';
+import Actionbar from './components/Actionbar';
 
 function App() {
   const[title,setTitle] = useState('');
@@ -38,9 +38,10 @@ const isValidTitle:()=>boolean = ()=>{
     <div className="App">
     {/* <Header/> */}
     <div className="container">
-      <Sidebar todos={todos} onAddTodo={newTodoCard} onTitleCard={selectTitleCard}/>
+      <Sidebar todos={todos} onTitleCard={selectTitleCard}/>
       {/* <div className="vertical-bar"></div> */}
       <TodoCard title={title} content={content} setTitle={setTitle} setContent={setContent}/>
+      <Actionbar onAddTodo={newTodoCard}/>
     </div>
   </div>
   );

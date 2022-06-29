@@ -1,5 +1,3 @@
-import { SelectAllRounded } from '@mui/icons-material';
-
 import React from 'react'
 
 interface TitleCardProps {
@@ -17,6 +15,7 @@ const TitleCard = ({ title,isSelected,onTitleCard }:TitleCardProps) => {
         }}>
       <p>{title}</p>
       </button>
+      <div className={"select-tab"+(isSelected?" is-selected":"")}></div>
     </div>
   )
 }
