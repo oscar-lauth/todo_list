@@ -1,17 +1,20 @@
 import { SelectAllRounded } from '@mui/icons-material';
+
 import React from 'react'
 
 interface TitleCardProps {
   title:string;
-  //index:number;
+  isSelected:boolean;
   onTitleCard:()=>void;
+  // selected:boolean;
 }
-
-const TitleCard = ({ title,onTitleCard }:TitleCardProps) => {
-  let selected:boolean = false;
+const TitleCard = ({ title,isSelected,onTitleCard }:TitleCardProps) => {
   return (
     <div className="title-card">
-      <button className={selected?"title-card_btn":"penis"} onClick={()=>{onTitleCard();selected=!selected;}}>
+      <button className={"title-card_btn"+(isSelected?" is-selected":"")}
+      onClick={(e)=>{
+        onTitleCard();
+        }}>
       <p>{title}</p>
       </button>
     </div>

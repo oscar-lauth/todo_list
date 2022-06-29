@@ -124,10 +124,13 @@ input,textarea {
     width:200px;
     transition-duration: .2s;
 }
-
-.title-card_btn .is-selected {
-    color:blue;
+.title-card_btn.is-selected {
+    background-color:blue;
 }
+
+/* .title-card_btn.is-selected {
+    background-color:blue;
+} */
 
 .title-card_btn:hover {
     /* border: 2px solid lightseagreen; */

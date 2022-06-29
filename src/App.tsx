@@ -29,6 +29,7 @@ const isValidTitle:()=>boolean = ()=>{
   const selectTitleCard = (index?:number)=>{
     if(index===undefined || title===todos[index].title)
       return;
+    
     setTitle(todos[index].title);
     setContent(todos[index].content);
   }
